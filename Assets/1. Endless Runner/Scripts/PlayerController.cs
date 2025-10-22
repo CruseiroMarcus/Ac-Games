@@ -21,7 +21,7 @@ public class PlayerController : MonoBehaviour
     }
     private void Impulsionar()
     {
-        rb.linearVelocity = Vector2.zero;
+        rb.linearVelocity = new Vector2(rb.linearVelocity.x, 0); ;
         rb.AddForce(Vector2.up * velocidade, ForceMode2D.Impulse);
     }
 }
