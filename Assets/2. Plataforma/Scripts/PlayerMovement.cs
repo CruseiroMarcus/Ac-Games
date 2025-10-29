@@ -3,12 +3,12 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody2D))]
 public class PlayerMovement : MonoBehaviour
 {
-    public float speed = 5f;
-    public float jumpForce = 16f;
+    public float speed = 7;
+    public float jumpForce = 35;
     private Rigidbody2D rb;
     private bool isGrounded;
     public float gravityScale = 10;
-    public float fallingGravityScale = 40;
+    public float fallingGravityScale = 10;
 
     void Start()
     {
