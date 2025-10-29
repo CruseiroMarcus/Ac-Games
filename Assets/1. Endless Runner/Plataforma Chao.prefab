@@ -102,7 +102,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocidade: 2
-  variacaoY: 2
+  variacaoY: 1.2
 --- !u!61 &45765826055308700
 BoxCollider2D:
   m_ObjectHideFlags: 0

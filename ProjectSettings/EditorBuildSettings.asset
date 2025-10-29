@@ -6,11 +6,14 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/1. Endless Runner/Endless Runner.unity
-    guid: 8c9cfa26abfee488c85f1582747f6a02
-  - enabled: 1
     path: Assets/1. Endless Runner/Menu.unity
     guid: 026a53588abfddc43afd8132a5d217ca
+  - enabled: 1
+    path: Assets/2. Plataforma/Plataforma.unity
+    guid: 09b3ed79a1f7e0047b3a2dab71feb4b4
+  - enabled: 0
+    path: Assets/1. Endless Runner/Endless Runner.unity
+    guid: 8c9cfa26abfee488c85f1582747f6a02
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

@@ -4,9 +4,11 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     public float speed = 5f;
-    public float jumpForce = 8f;
+    public float jumpForce = 16f;
     private Rigidbody2D rb;
     private bool isGrounded;
+    public float gravityScale = 10;
+    public float fallingGravityScale = 40;
 
     void Start()
     {
@@ -21,6 +23,14 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetButtonDown("Jump") && isGrounded)
         {
             rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+        }
+        if(rb.linearVelocity.y >= 0)
+        { 
+            rb.gravityScale = gravityScale;
+        }
+        else if( rb.linearVelocity.y < 0)
+        {
+            rb.gravityScale = fallingGravityScale;
         }
     }
 
