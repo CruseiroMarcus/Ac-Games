@@ -3,24 +3,31 @@ using UnityEngine;
 public class Obstaculo : MonoBehaviour
 {
     public float velocidade = 0.6f;
-
     public float variacaoY;
 
     private void Awake()
     {
-        transform.Translate(Vector3.up * Random.Range(-variacaoY,variacaoY));
+        // Variação na posição Y
+        transform.Translate(Vector3.up * Random.Range(-variacaoY, variacaoY));
+
+        // Rotação inicial aleatória no eixo Z
+        float rotacaoZ = Random.Range(0f, 180f);
+        transform.rotation = Quaternion.Euler(0f, 0f, rotacaoZ);
     }
 
-    // Update is called once per frame
     void Update()
-    {   
-        transform.Translate(Vector3.left * velocidade * Time.deltaTime);
-    }
-    void OnTriggerEnter2D(Collider2D collision){
-         Destruir();
+    {
+        // Movimento para a esquerda
+        transform.Translate(Vector3.left * velocidade * Time.deltaTime, Space.World);
     }
 
-    public void Destruir(){
-       Destroy(gameObject);
-     }
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        Destruir();
+    }
+
+    public void Destruir()
+    {
+        Destroy(gameObject);
+    }
 }

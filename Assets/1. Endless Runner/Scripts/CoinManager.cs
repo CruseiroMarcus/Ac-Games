@@ -32,7 +32,7 @@ public class CoinManager : MonoBehaviour
 
     void AtualizarHUD()
     {
-        TextoMoedas.text = "Moedas: " + moedas;
+        TextoMoedas.text = moedas.ToString();
     }
 }
     
